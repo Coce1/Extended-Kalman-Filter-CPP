@@ -71,17 +71,6 @@ $$
 - **Red points:** Raw noisy GPS observations.
 - **Blue circle:** Filtered, smooth trajectory estimated by the EKF.
 
-## 📂 Project Structure
-
-```text
-├── .gitignore             # Visual Studio build and cache artifact exclusions
-├── packages.config        # NuGet package management definitions (Raylib)
-├── KalmanFilter.slnx      # Solution configuration file
-└── KalmanFilter/          # Project source directory
-    ├── KalmanFilter.vcxproj
-    └── main.cpp           # EKF implementation, simulation engine, and Raylib renderer
-```
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
