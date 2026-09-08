@@ -70,3 +70,16 @@ $$
 - **HUD display:** Displays real-time linear/angular velocity commands $(v, \omega)$.
 - **Red points:** Raw noisy GPS observations.
 - **Blue circle:** Filtered, smooth trajectory estimated by the EKF.
+
+  ## 📂 Project Structure
+
+```text
+├── .gitignore                                    # Visual Studio and build artifact exclusions
+├── packages.config                               # NuGet dependency definitions (Raylib)
+├── Planification et Asservissement (A + EKF).slnx # Visual Studio Solution configuration
+└── main.cpp                                      # Grid engine, A* algorithm, and Raylib rendering loop
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
