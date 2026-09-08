@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="KalmanFilter/KalmanFilter.vcxproj" Id="a9f81028-ea5e-4f23-a2c1-653223383b2c" />
+</Solution>
