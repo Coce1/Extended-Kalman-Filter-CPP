@@ -24,7 +24,8 @@ The Extended Kalman Filter (EKF) is the standard algorithm for state estimation 
 ### 1. State Vector
 The discrete system state $\mathbf{x}_k \in \mathbb{R}^4$ is defined by 2D coordinates and linear velocities:
 
-$$\mathbf{x}_k = \begin{bmatrix} x_k \\ y_k \\ \dot{x}_k \\ \dot{y}_k \end{bmatrix}$$
+```math
+\mathbf{x}_k = \begin{bmatrix} x_k \\ y_k \\ \dot{x}_k \\ \dot{y}_k \end{bmatrix}
 
 ### 2. Prediction Step
 Using a non-linear process model $f(\mathbf{x}_{k-1}, \mathbf{u}_k)$ with sampling time $\Delta t$:
