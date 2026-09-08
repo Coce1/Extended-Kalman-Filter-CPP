@@ -41,6 +41,7 @@ At each timestep, the state transition Jacobian $F_k$ is computed dynamically:
 $$
 F_k = \left. \frac{\partial f}{\partial x} \right|_{\hat{x}_{k-1}} = \begin{bmatrix} 1 & 0 & -v \cdot \Delta t \cdot \sin(\theta) \\\\ 0 & 1 & v \cdot \Delta t \cdot \cos(\theta) \\\\ 0 & 0 & 1 \end{bmatrix}
 $$
+
 ---
 ## 🛠 Project Structure
 
