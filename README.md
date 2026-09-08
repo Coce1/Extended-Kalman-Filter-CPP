@@ -43,16 +43,6 @@ F_k = \left. \frac{\partial f}{\partial x} \right|_{\hat{x}_{k-1}} = \begin{bmat
 $$
 
 ---
-## 🛠 Project Structure
-
-```text
-.
-├── main.cpp          # EKF loop, state updates, and visualization
-├── .gitignore        # Ignores build artifacts and intermediate objects
-└── README.md         # Project documentation and theoretical background
-
-```
----
 ## 🚀 Getting Started
 
 ### Prerequisites
