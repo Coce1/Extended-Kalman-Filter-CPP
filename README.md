@@ -74,10 +74,12 @@ $$
   ## 📂 Project Structure
 
 ```text
-├── .gitignore                                    # Visual Studio and build artifact exclusions
-├── packages.config                               # NuGet dependency definitions (Raylib)
-├── Planification et Asservissement (A + EKF).slnx # Visual Studio Solution configuration
-└── main.cpp                                      # Grid engine, A* algorithm, and Raylib rendering loop
+├── .gitignore             # Visual Studio build and cache artifact exclusions
+├── packages.config        # NuGet package management definitions (Raylib)
+├── KalmanFilter.slnx      # Solution configuration file
+└── KalmanFilter/          # Project source directory
+    ├── KalmanFilter.vcxproj
+    └── main.cpp           # EKF implementation, simulation engine, and Raylib renderer                                      # Grid engine, A* algorithm, and Raylib rendering loop
 ```
 
 ## 📄 License
