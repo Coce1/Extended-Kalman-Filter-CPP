@@ -71,7 +71,7 @@ $$
 - **Red points:** Raw noisy GPS observations.
 - **Blue circle:** Filtered, smooth trajectory estimated by the EKF.
 
-  ## 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 ├── .gitignore             # Visual Studio build and cache artifact exclusions
