@@ -79,7 +79,7 @@ $$
 ├── KalmanFilter.slnx      # Solution configuration file
 └── KalmanFilter/          # Project source directory
     ├── KalmanFilter.vcxproj
-    └── main.cpp           # EKF implementation, simulation engine, and Raylib renderer                                      # Grid engine, A* algorithm, and Raylib rendering loop
+    └── main.cpp           # EKF implementation, simulation engine, and Raylib renderer
 ```
 
 ## 📄 License
