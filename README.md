@@ -22,39 +22,38 @@ The Extended Kalman Filter (EKF) is the standard algorithm for state estimation 
 ## 📐 Mathematical Formulation
 
 ### 1. State Vector
-The discrete system state $\mathbf{x}_k \in \mathbb{R}^4$ is defined by 2D coordinates and linear velocities:
+The discrete system state $x_k \in \mathbb{R}^4$ is defined by 2D coordinates and linear velocities:
 
-```math
-\mathbf{x}_k = \begin{bmatrix} x_k \\ y_k \\ \dot{x}_k \\ \dot{y}_k \end{bmatrix}
+$$x_k = \begin{bmatrix} x_k \\ y_k \\ \dot{x}_k \\ \dot{y}_k \end{bmatrix}$$
 
 ### 2. Prediction Step
-Using a non-linear process model $f(\mathbf{x}_{k-1}, \mathbf{u}_k)$ with sampling time $\Delta t$:
+Using a non-linear process model $f(\hat{x}_{k-1}^+, u_k)$ with sampling time $\Delta t$:
 
-$$\mathbf{\hat{x}}_k^- = f(\mathbf{\hat{x}}_{k-1}^+, \mathbf{u}_k)$$
+$$\hat{x}_k^- = f(\hat{x}_{k-1}^+, u_k)$$
 
-$$\mathbf{P}_k^- = \mathbf{F}_k \mathbf{P}_{k-1}^+ \mathbf{F}_k^T + \mathbf{Q}$$
+$$P_k^- = F_k P_{k-1}^+ F_k^T + Q$$
 
-Where:
-- $\mathbf{F}_k = \left. \frac{\partial f}{\partial \mathbf{x}} \right\vert{}_{\mathbf{\hat{x}}_{k-1}^+}$ is the process Jacobian.
-- $\mathbf{Q}$ is the process noise covariance matrix.
-- $\mathbf{P}$ is the state estimation error covariance matrix.
+**Where:**
+- $F_k = \left. \frac{\partial f}{\partial x} \right\vert{}_{\hat{x}_{k-1}^+}$ is the process Jacobian matrix.
+- $Q$ is the process noise covariance matrix.
+- $P$ is the state estimation error covariance matrix.
 
 ### 3. Update Step
-Given a measurement vector $\mathbf{z}_k$ and observation model $h(\mathbf{x})$:
+Given a measurement vector $z_k$ and observation model $h(x)$:
 
-$$\mathbf{y}_k = \mathbf{z}_k - h(\mathbf{\hat{x}}_k^-) \quad \text{(Innovation)}$$
+$$y_k = z_k - h(\hat{x}_k^-) \quad \text{(Innovation)}$$
 
-$$\mathbf{S}_k = \mathbf{H}_k \mathbf{P}_k^- \mathbf{H}_k^T + \mathbf{R} \quad \text{(Innovation Covariance)}$$
+$$S_k = H_k P_k^- H_k^T + R \quad \text{(Innovation Covariance)}$$
 
-$$\mathbf{K}_k = \mathbf{P}_k^- \mathbf{H}_k^T \mathbf{S}_k^{-1} \quad \text{(Kalman Gain)}$$
+$$K_k = P_k^- H_k^T S_k^{-1} \quad \text{(Kalman Gain)}$$
 
-$$\mathbf{\hat{x}}_k^+ = \mathbf{\hat{x}}_k^- + \mathbf{K}_k \mathbf{y}_k \quad \text{(Updated State)}$$
+$$\hat{x}_k^+ = \hat{x}_k^- + K_k y_k \quad \text{(Updated State)}$$
 
-$$\mathbf{P}_k^+ = (\mathbf{I} - \mathbf{K}_k \mathbf{H}_k) \mathbf{P}_k^- \quad \text{(Updated Covariance)}$$
+$$P_k^+ = (I - K_k H_k) P_k^- \quad \text{(Updated Covariance)}$$
 
-Where:
-- $\mathbf{H}_k = \left. \frac{\partial h}{\partial \mathbf{x}} \right\vert{}_{\mathbf{\hat{x}}_k^-}$ is the observation Jacobian.
-- $\mathbf{R}$ is the measurement noise covariance matrix.
+**Where:**
+- $H_k = \left. \frac{\partial h}{\partial x} \right\vert{}_{\hat{x}_k^-}$ is the observation Jacobian matrix.
+- $R$ is the measurement noise covariance matrix.
 
 ---
 
