@@ -43,16 +43,6 @@ F_k = \left. \frac{\partial f}{\partial x} \right|_{\hat{x}_{k-1}} = \begin{bmat
 $$
 
 ---
-## 🛠 Project Structure
-
-```text
-.
-├── main.cpp          # EKF loop, state updates, and visualization
-├── .gitignore        # Ignores build artifacts and intermediate objects
-└── README.md         # Project documentation and theoretical background
-
-```
----
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -70,17 +60,6 @@ $$
 - **HUD display:** Displays real-time linear/angular velocity commands $(v, \omega)$.
 - **Red points:** Raw noisy GPS observations.
 - **Blue circle:** Filtered, smooth trajectory estimated by the EKF.
-
-## 📂 Project Structure
-
-```text
-├── .gitignore             # Visual Studio build and cache artifact exclusions
-├── packages.config        # NuGet package management definitions (Raylib)
-├── KalmanFilter.slnx      # Solution configuration file
-└── KalmanFilter/          # Project source directory
-    ├── KalmanFilter.vcxproj
-    └── main.cpp           # EKF implementation, simulation engine, and Raylib renderer
-```
 
 ## 📄 License
 
