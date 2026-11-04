@@ -19,5 +19,5 @@ if(NOT raylib_FOUND)
   FetchContent_MakeAvailable(raylib)
 endif()
 
-add_executable(ekf_demo main.cpp)
+add_executable(ekf_demo KalmanFilter/main.cpp KalmanFilter/ekf.hpp)
 target_link_libraries(ekf_demo PRIVATE Eigen3::Eigen raylib)
