@@ -40,7 +40,12 @@ $$
 At each timestep, the state transition Jacobian $F_k$ is computed dynamically:
 
 $$
-F_k = \left. \frac{\partial f}{\partial x} \right|_{\hat{x}_{k-1}} = \begin{bmatrix} 1 & 0 & -v \cdot \Delta t \cdot \sin(\theta) \\ 0 & 1 & v \cdot \Delta t \cdot \cos(\theta) \\ 0 & 0 & 1 \end{bmatrix}
+F_k = \left. \frac{\partial f}{\partial x} \right|_{\hat{x}_{k-1}} =
+\begin{bmatrix}
+1 & 0 & -v \cdot \Delta t \cdot \sin(\theta) \\
+0 & 1 & v \cdot \Delta t \cdot \cos(\theta) \\
+0 & 0 & 1
+\end{bmatrix}
 $$
 
 The process noise is derived from the odometry noise: $Q = G \, Q_u \, G^T$ with $Q_u = \mathrm{diag}(\sigma_v^2, \sigma_\omega^2)$.
